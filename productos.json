@@ -1,0 +1,97 @@
+{
+  "productos": [
+    {
+      "id": 1,
+      "nombre": "Incienso Zen",
+      "precio": 7000,
+      "destacado": true,
+      "src": "../producto1.png",
+      "stock": "25",
+      "categoria": "Decorativo",
+      "estilo": "Minimalista",
+      "descripcion": "Un elegante porta incienso con diseño minimalista, ideal para crear un ambiente relajante y armonioso en cualquier espacio."
+    },
+    {
+      "id": 2,
+      "nombre": "Banco Terra",
+      "precio": 15000,
+      "destacado": true,
+      "src": "../producto2.png",
+      "stock": "10",
+      "categoria": "Sillas",
+      "estilo": "Brutalista",
+      "descripcion": "Banco de madera maciza con un diseño robusto, perfecto para interiores con un estilo brutalista."
+    },
+    {
+      "id": 3,
+      "nombre": "Lámpara Oasis Dorada",
+      "precio": 5000,
+      "destacado": true,
+      "src": "../producto3.png",
+      "stock": "30",
+      "categoria": "Lámparas",
+      "estilo": "Minimalista",
+      "descripcion": "Lámpara de pared con un acabado dorado, ideal para iluminar cualquier espacio con un toque elegante y moderno."
+    },
+    {
+      "id": 4,
+      "nombre": "Sillón Luna Nueva",
+      "precio": 35000,
+      "src": "../producto4.png",
+      "stock": "10",
+      "categoria": "Sillas",
+      "estilo": "Minimalista",
+      "descripcion": "Sillón acolchonado y diseño minimalista, pensado para ofrecer confort y estilo en cualquier ambiente."
+    },
+    {
+      "id": 5,
+      "nombre": "Lámparas Luces Doradas",
+      "precio": 7000,
+      "src": "../producto5.png",
+      "stock": "50",
+      "categoria": "Lámparas",
+      "estilo": "Brutalista",
+      "descripcion": "Set de lámparas colgantes con acabados metálicos dorados, ideales para iluminar espacios con un estilo industrial y sofisticado."
+    },
+    {
+      "id": 6,
+      "nombre": "Lámpara Flexo Metal",
+      "precio": 7500,
+      "src": "../producto6.png",
+      "stock": "30",
+      "categoria": "Lámparas",
+      "estilo": "Minimalista",
+      "descripcion": "Lámpara de escritorio con brazo articulado y acabado metálico, perfecta para iluminar zonas de trabajo con un diseño funcional y elegante."
+    },
+    {
+      "id": 7,
+      "nombre": "Silla Clásica",
+      "precio": 30000,
+      "src": "../producto7.png",
+      "stock": "20",
+      "categoria": "Sillas",
+      "estilo": "Brutalista",
+      "descripcion": "Silla de madera con un diseño clásico, ideal para ambientes con una estética oficinista."
+    },
+    {
+      "id": 8,
+      "nombre": "Taza Elegancia Tradicional",
+      "precio": 8000,
+      "src": "../producto8.png",
+      "stock": "50",
+      "categoria": "Decorativo",
+      "estilo": "Minimalista",
+      "descripcion": "Taza de cerámica con un diseño elegante y atemporal, perfecta para disfrutar de tu café o té con estilo."
+    },
+    {
+      "id": 9,
+      "nombre": "Plato Serenidad",
+      "precio": 7000,
+      "src": "../producto9.png",
+      "stock": "50",
+      "categoria": "Decorativo",
+      "estilo": "Minimalista",
+      "descripcion": "Plato de porcelana con un diseño simple y sofisticado, ideal para complementar una mesa de estilo minimalista."
+    }
+  ]
+}
