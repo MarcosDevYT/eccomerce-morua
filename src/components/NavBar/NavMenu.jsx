@@ -36,7 +36,7 @@ const NavMenu = ({ open, openMenu ,toggleMenu , toggle, }) => {
   return (
     <div
       className={`fixed z-50 ${
-        showContainer ? "top-0" : "top-[-100%]"
+        showContainer ? "top-0" : "top-[-150%]"
       } left-0 h-screen w-full bg-slate-50 transition-all duration-[900ms] ease-[cubic-bezier(0.76, 0, 0.24, 1)]`}
     >
       <nav className="w-full shadow-md">
