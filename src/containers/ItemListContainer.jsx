@@ -3,15 +3,14 @@ import { useNavigate } from "react-router-dom";
 import { getProducts } from "../firebase";
 
 import Item from "../components/Item"
-import LoadingContainer from "../components/LoadingContainer";
 import Container from "../components/Layout/Container";
 import TitleSection from "../components/TitleSection";
+import ItemListSkeleton from "../components/Skeletons/ItemListSkeleton";
 
 const ItemListContainer = ({ categoria, title, destacado }) => {
   const navigate = useNavigate();
   const [productos, setProductos] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   // Conseguir el json de productos y setear el loading
   useEffect(() => {
@@ -21,7 +20,7 @@ const ItemListContainer = ({ categoria, title, destacado }) => {
         const productosObtenidos = await getProducts();
         setProductos(productosObtenidos);
       } catch (error) {
-        setError(error.message);
+        console.error(error);
       } finally {
         setLoading(false);
       }
@@ -45,7 +44,7 @@ const ItemListContainer = ({ categoria, title, destacado }) => {
   }
 
   if (loading) {
-    return <LoadingContainer loading={loading} error={error} />;
+    return <ItemListSkeleton length={3} title="Cargando productos..." />;
   }
 
   const productosAMostrar = getProductosAMostrar();

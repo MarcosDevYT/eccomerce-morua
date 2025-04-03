@@ -9,6 +9,8 @@ import NavBar from "./components/NavBar/NavBar"
 import Footer from "./components/Layout/Footer"
 import ItemDetailContainer from "./containers/ItemDetailContainer"
 import { CartPage } from "./pages/CartPage"
+import OrderPage from "./pages/OrderPage"
+
 
 function App() {
   return (
@@ -32,6 +34,7 @@ function App() {
           <Route path="/category/:categoryId" element={<Category />} />
           <Route path="/detalle-producto/:id" element={<ItemDetailContainer />} />
           <Route path="/cart" element={<CartPage />} />
+          <Route path="/orders" element={<OrderPage/>} />
           <Route path="*" element={<NotFound />} /> 
         </Routes>
         <Footer />

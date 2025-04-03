@@ -39,7 +39,11 @@ const CartWidget = ({ open, toggle }) => {
         </div>
 
         {cartList.length === 0 ? (
-          <p className="text-center py-8 text-gray-500">Tu carrito está vacío</p>
+          <>
+            <p className="text-center py-8 text-gray-500">Tu carrito está vacío</p>
+            <Button wfull href={"/orders"} text={"Tus Pedidos"} />
+          </>
+
         ) : (
           <>
             <ul className="mt-3 space-y-3 overflow-y-auto max-h-72">
@@ -50,10 +54,10 @@ const CartWidget = ({ open, toggle }) => {
               ))}
             </ul>
 
-            <div className="mt-4 pt-4">
-              <div className="flex justify-between items-center mb-4">
-                <span className="text-2xl font-playfart">Total:</span>
-                <span className="text-2xl">${totalPriceFormated}</span>
+            <div className="flex flex-col gap-4 mt-4">
+              <div className="flex justify-between items-center">
+                <p className="text-2xl font-playfart">Total:</p>
+                <strong className="font-normal text-2xl">${totalPriceFormated}</strong>
               </div>
               
               <div className="flex flex-col md:flex-row gap-2">
@@ -66,8 +70,9 @@ const CartWidget = ({ open, toggle }) => {
                   onClick={clearCart}
                   className="w-full md:text-xl text-red-700 font-playfart hover:text-white hover:bg-red-700 transition"
                   text={"Vaciar"}
-                />
+                  />
               </div>
+              <Button wfull href={"/orders"} text={"Tus Pedidos"} />
             </div>
           </>
         )}

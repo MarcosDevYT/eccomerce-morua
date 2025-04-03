@@ -2,7 +2,7 @@
 import productos from '../productos.json';
 
 import { initializeApp } from "firebase/app";
-import { addDoc, collection, doc, getDoc, getDocs, getFirestore, query, where } from "firebase/firestore";
+import { addDoc, collection, doc, getDoc, getDocs, getFirestore, query, where, serverTimestamp } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -105,3 +105,44 @@ export async function upProducts() {
     console.error("Error al crear el documento: ", err);
   }
 }
+
+// Función para crear una nueva orden de compra
+export const createOrder = async (orderData) => {
+  try {
+    const ordersCollection = collection(db, 'orders');
+    
+    // Añadir timestamp del servidor para tener una fecha consistente
+    const orderWithTimestamp = {
+      ...orderData,
+      Fecha: serverTimestamp()
+    };
+    
+    const docRef = await addDoc(ordersCollection, orderWithTimestamp);
+    console.log("Orden creada con ID:", docRef.id);
+    return docRef.id;
+  } catch (error) {
+    console.error("Error al crear la orden:", error);
+    throw error;
+  }
+};
+
+// Función para obtener órdenes por sessionId
+export const getOrdersBySessionId = async (sessionId) => {
+  try {
+    const q = query(
+      collection(db, 'orders'),
+      where('sessionId', '==', sessionId)
+    );
+    
+    const querySnapshot = await getDocs(q);
+    const orders = querySnapshot.docs.map(doc => ({
+      id: doc.id,
+      ...doc.data()
+    }));
+    
+    return orders;
+  } catch (error) {
+    console.error("Error al obtener las órdenes:", error);
+    throw error;
+  }
+};
